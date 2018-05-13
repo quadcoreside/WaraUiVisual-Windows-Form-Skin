@@ -1,0 +1,14 @@
+C:\Users\QuadCore\Documents\Visual Studio 2017\Projects\WARA TUBE\MaterialSkin\bin\Debug\WaraUiDraw.dll
+C:\Users\QuadCore\Documents\Visual Studio 2017\Projects\WARA TUBE\MaterialSkin\bin\Debug\WaraUiDraw.pdb
+C:\Users\QuadCore\Documents\Visual Studio 2017\Projects\WARA TUBE\MaterialSkin\obj\Debug\WaraUi.Properties.Resources.resources
+C:\Users\QuadCore\Documents\Visual Studio 2017\Projects\WARA TUBE\MaterialSkin\obj\Debug\WaraUiVisual.csproj.GenerateResource.Cache
+C:\Users\QuadCore\Documents\Visual Studio 2017\Projects\WARA TUBE\MaterialSkin\obj\Debug\WaraUiDraw.dll
+C:\Users\QuadCore\Documents\Visual Studio 2017\Projects\WARA TUBE\MaterialSkin\obj\Debug\WaraUiDraw.pdb
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\bin\Debug\WaraUiDraw.dll
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\bin\Debug\WaraUiDraw.pdb
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\obj\Debug\WaraUi.Properties.Resources.resources
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\obj\Debug\WaraUiVisual.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\obj\Debug\WaraUiDraw.dll
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\obj\Debug\WaraUiDraw.pdb
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\bin\Debug\WaraUiDraw.dll.CodeAnalysisLog.xml
+C:\Users\admin\Documents\Visual Studio 2017\Projects\WaraUiVisual\bin\Debug\WaraUiDraw.dll.lastcodeanalysissucceeded

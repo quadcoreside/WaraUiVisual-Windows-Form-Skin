@@ -1,0 +1,88 @@
+﻿using WaraUi.Animations;
+using System.ComponentModel;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Threading;
+using System.Windows.Forms;
+
+namespace WaraUi.Controls
+{
+    /// <summary>
+    /// Material design-like progress bar
+    /// </summary>
+    public class WaraProgressBar : ProgressBar, IWaraControl
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WaraProgressBar"/> class.
+        /// </summary>
+        public WaraProgressBar()
+        {
+
+            animationManager = new AnimationManager
+            {
+                Increment = 0.06,
+                AnimationType = AnimationType.EaseInOut,
+                InterruptAnimation = false
+            };
+            animationManager.OnAnimationProgress += sender => Invalidate();
+
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+        }
+        private readonly AnimationManager animationManager;
+
+        /// <summary>
+        /// Gets or sets the depth.
+        /// </summary>
+        /// <value>
+        /// The depth.
+        /// </value>
+        [Browsable(false)]
+        public int Depth { get; set; }
+
+        /// <summary>
+        /// Gets the skin manager.
+        /// </summary>
+        /// <value>
+        /// The skin manager.
+        /// </value>
+        [Browsable(false)]
+        public WaraSkinManager SkinManager
+        {
+            get { return WaraSkinManager.Instance; }
+        }
+
+        /// <summary>
+        /// Gets or sets the state of the mouse.
+        /// </summary>
+        /// <value>
+        /// The state of the mouse.
+        /// </value>
+        [Browsable(false)]
+        public MouseState MouseState { get; set; }
+
+        /// <summary>
+        /// Performs the work of setting the specified bounds of this control.
+        /// </summary>
+        /// <param name="x">The new <see cref="P:System.Windows.Forms.Control.Left" /> property value of the control.</param>
+        /// <param name="y">The new <see cref="P:System.Windows.Forms.Control.Top" /> property value of the control.</param>
+        /// <param name="width">The new <see cref="P:System.Windows.Forms.Control.Width" /> property value of the control.</param>
+        /// <param name="height">The new <see cref="P:System.Windows.Forms.Control.Height" /> property value of the control.</param>
+        /// <param name="specified">A bitwise combination of the <see cref="T:System.Windows.Forms.BoundsSpecified" /> values.</param>
+        protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
+        {
+            base.SetBoundsCore(x, y, width, height, specified);
+        }
+
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.Forms.Control.Paint" /> event.
+        /// </summary>
+        /// <param name="e">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            var doneProgress = (int)(e.ClipRectangle.Width * ((double)Value / Maximum));
+            e.Graphics.FillRectangle(SkinManager.ColorScheme.PrimaryBrush, 0, 0, doneProgress, e.ClipRectangle.Height);
+            e.Graphics.FillRectangle(SkinManager.GetDisabledOrHintBrush(), doneProgress, 0, e.ClipRectangle.Width, e.ClipRectangle.Height);
+        }
+    }
+}

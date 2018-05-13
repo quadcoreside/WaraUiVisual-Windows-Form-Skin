@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15724EAB-4850-4494-8534-80BF37FFFCA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WaraUi</RootNamespace>
+    <AssemblyName>WaraUiDraw</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animations\AnimationDirection.cs" />
+    <Compile Include="Animations\AnimationManager.cs" />
+    <Compile Include="Animations\Animations.cs" />
+    <Compile Include="ColorScheme.cs" />
+    <Compile Include="Controles\WaraCheckbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraDivider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraFlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraLoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraLoadingCircleToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraRaisedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraSingleLineTextField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraTabSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\WaraTabSelectorVertical.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DrawHelper.cs" />
+    <Compile Include="IWaraControl.cs" />
+    <Compile Include="Controles\LoadingCircle.Designer.cs" />
+    <Compile Include="WaraSkinManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
